@@ -1,5 +1,5 @@
-/*------------------------------------------------------------------
-[ANTI-PATTERN]
+/*================================================================================
+[ANTI-PATTERN: This is an example of an improperly-designed module]
 */
 .nav-menu {
 	background: #f0f0f0;
@@ -41,8 +41,8 @@
 	}
 }
 
-/*------------------------------------------------------------------
-[BETTER PATTERN]
+/*================================================================================
+[BETTER PATTERN: This module follows BEM guidelines]
 */
 
 // Unique module name, not limited to any specific context
@@ -51,26 +51,29 @@
 	border: 1px solid #ccc;
 	font-size: 10px;
 
-	.nav-menu__list {
+	// Good nesting: You can use the & operator in LESS to nest elements within
+	// their parent blocks for better readability.
+	&__list {
 		margin-left: 0;
 		padding-left: 0;
 		list-style: none;
 	}
 
-	// Predictable, class-only specificity. It's easy for modules to override base element definitions
-	// and we're always incrementing specificity by 10.
-	.nav-menu__item {
+	// This pattern offers predictable specificity. It's easy for modules to override
+ 	// base element definitions and we're always incrementing specificity by 10.
+	&__item {
 		padding: 10px 0;
 	}
 
-	// Elements within the block are not tied to specific markup structures.
-	.nav-menu__link {
+	// Elements within the block are never tied to specific HTML elements, or
+	// specific markup structures.
+	&__link {
 		color: red;
 	}
 }
 
-// This class name tells you why it varies from the base, not *where* in the site the override applies.
-// Semantically cleaner.
+// This class name tells you *why* it varies from the base, not *where* in the site
+// the override applies.
 .nav-menu--lg {
 	font-size: 20px;
 }
