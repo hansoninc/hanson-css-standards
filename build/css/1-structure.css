@@ -4,19 +4,10 @@
   padding: 20px;
 }
 
-.module2 {
-  color: red;
-  font-weight: bold;
-}
-
 @media (min-width: 768px) {
   .module {
     float: left;
     width: 48%;
     margin-right: 2px;
-  }
-
-  .module2 {
-    text-transform: uppercase;
   }
 }
