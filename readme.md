@@ -1,3 +1,5 @@
+<img src="src/img/hanson-logo.png" style="width: 100%; max-width: 350px;" alt="Hanson Inc logo" />
+
 # Hanson CSS Standards
 
 These five example files outline the principles of how we write stylesheets at Hanson.
