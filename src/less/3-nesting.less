@@ -19,8 +19,8 @@
 			padding: 10px 0;
 
 			// Issue 3: Nesting makes for brittle selectors
-			// Anti-pattern because: The structure becomes more brittle because you can't insert or remove elements
-			// from the markup without destroying the cascade.
+			// Anti-pattern because: The deeper you nest, the more brittle the structure becomes.
+			// You can't insert or remove elements from the markup without destroying the cascade.
 			a {
 				color: red;
 			}

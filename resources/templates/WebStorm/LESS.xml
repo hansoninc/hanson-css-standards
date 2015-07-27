@@ -1,0 +1,30 @@
+<templateSet group="LESS">
+  <template name="toc" value="/*================================================================================&#10;[$END$]&#10;*/" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="tocm" value="/*------- [$END$] -------*/" description="Table of Contents - Minor" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="dss" value="/**&#10;  * @toc $TOC$$END$&#10;  * @name $NAME$&#10;  * @slug $SLUG$&#10;  * @container true&#10;  * @gridclass col-xs-12&#10;  * @description $DESC$ &#10;  */ " description="DSS doc block" toReformat="false" toShortenFQNames="true">
+    <variable name="TOC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SLUG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>
