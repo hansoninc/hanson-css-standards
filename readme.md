@@ -24,3 +24,9 @@ information on how to use the templates.
 On **Windows**, copy the templates in `resources/templates/WebStorm` into your `%userprofile%\.WebStorm<version-number>\config\templates` directory.
 
 On **Mac**, copy the templates into `~/Library/Preferences/WebStorm<version-number>/templates`.
+
+### Sublime Text 2/3
+
+On **Windows**, copy the templates in `resources/templates/SublimeText` into your `%APPDATA%/Sublime Text 2/Packages/Sublime Text 2 Snippets` directory.
+
+On **Mac**, copy the templates into `~/Library/Application Support/Sublime Text 2/Packages/User`.
