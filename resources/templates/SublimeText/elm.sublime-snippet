@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+${1:ELMNAME} {
+	${2}
+}
+
+
+]]></content>
+	<tabTrigger>elm</tabTrigger>
+</snippet>
