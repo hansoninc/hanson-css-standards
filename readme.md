@@ -1,4 +1,4 @@
-<img src="src/img/hanson-logo.png" style="width: 100%; max-width: 350px;" alt="Hanson Inc logo" />
+<img src="src/img/hanson-logo.png" style="width: 100%; max-width: 450px;" alt="Hanson Inc logo" />
 
 # Hanson CSS Standards
 
