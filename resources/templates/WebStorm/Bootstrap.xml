@@ -31,14 +31,6 @@
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="lg-max" value="@media (max-width: @screen-lg-max) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
-      <option name="CSS" value="true" />
-    </context>
-  </template>
   <template name="md-max" value="@media (max-width: @screen-md-max) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="CSS_PROPERTY_VALUE" value="true" />
