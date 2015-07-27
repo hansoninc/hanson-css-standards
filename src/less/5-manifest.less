@@ -1,0 +1,81 @@
+// There are many good reasons to split your stylesheet into small modules. Modules make it easier for multiple
+// developers to work on a project. They increase readability within files. They also provide a logical "home" for
+// related styles.
+
+// Arrange your stylesheets in a manifest, in the order least-specific to most-specific.
+// Inverted Triangle CSS <https://speakerdeck.com/dafed/managing-css-projects-with-itcss> provides a good guideline
+// for organizing your stylesheets.
+
+// You should title your manifest global.less
+
+/*------------------------------------------------------------------
+[Layer 1 - Core variables and mixins]
+*/
+@import "lib/bootstrap/variables.less";
+@import "lib/bootstrap/mixins.less";
+
+// Add any custom mixins you create here
+
+/*------------------------------------------------------------------
+[Layer 2 - Reset and dependencies]
+*/
+@import "lib/bootstrap/normalize.less";
+@import "lib/bootstrap/print.less";
+@import "lib/bootstrap/glyphicons.less";
+
+// Add your fonts, icon sets, and any other global dependencies here
+
+/*------------------------------------------------------------------
+[Layer 3 - Core CSS]
+*/
+@import "lib/bootstrap/scaffolding.less";
+@import "lib/bootstrap/type.less";
+@import "lib/bootstrap/code.less";
+@import "lib/bootstrap/grid.less";
+@import "lib/bootstrap/tables.less";
+@import "lib/bootstrap/forms.less";
+@import "lib/bootstrap/buttons.less";
+
+/*------------------------------------------------------------------
+[Layer 4 - Components]
+*/
+// Comment out any Bootstrap modules you aren't using, or better yet
+// comment them all out and enable them as needed.
+
+//@import "lib/bootstrap/component-animations.less";
+//@import "lib/bootstrap/dropdowns.less";
+//@import "lib/bootstrap/button-groups.less";
+//@import "lib/bootstrap/input-groups.less";
+//@import "lib/bootstrap/navs.less";
+//@import "lib/bootstrap/navbar.less";
+//@import "lib/bootstrap/breadcrumbs.less";
+//@import "lib/bootstrap/pagination.less";
+//@import "lib/bootstrap/pager.less";
+//@import "lib/bootstrap/labels.less";
+//@import "lib/bootstrap/badges.less";
+//@import "lib/bootstrap/jumbotron.less";
+//@import "lib/bootstrap/thumbnails.less";
+//@import "lib/bootstrap/alerts.less";
+//@import "lib/bootstrap/progress-bars.less";
+//@import "lib/bootstrap/media.less";
+//@import "lib/bootstrap/list-group.less";
+//@import "lib/bootstrap/panels.less";
+//@import "lib/bootstrap/responsive-embed.less";
+//@import "lib/bootstrap/wells.less";
+//@import "lib/bootstrap/close.less";
+
+// Components w/ JavaScript
+//@import "lib/bootstrap/modals.less";
+//@import "lib/bootstrap/tooltip.less";
+//@import "lib/bootstrap/popovers.less";
+//@import "lib/bootstrap/carousel.less";
+
+// Add your own modules here
+
+/*------------------------------------------------------------------
+[Layer 5 - Utility classes]
+*/
+@import "lib/bootstrap/utilities.less";
+@import "lib/bootstrap/responsive-utilities.less";
+
+// Add your own utilities here

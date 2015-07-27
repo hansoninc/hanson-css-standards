@@ -1,0 +1,95 @@
+@import (reference) "lib/bootstrap/variables";
+
+// The best way to make your stylesheets readable is to keep them short, but modules within a stylesheet
+// still need to be organized. Sheets should have a table of contents, and there should be clear divisions
+// between modules.
+
+// Table of contents should read as follows:
+/*================================================================================
+[TABLE OF CONTENTS]
+	12.0 Navigation Menu (.nav-menu)
+		12.1 Navigation Menu, Large (.nav-menu--lg)
+		12.2 Navigation Menu, Fancy (.nav-menu--fancy)
+	13.0 Block Call-to-Action (.block-cta)
+*/
+
+// Use the following format to divide modules
+/*================================================================================
+[<Module TOC Number> <Module Name>]
+*/
+
+// Within modules, use the following format to denote the start of elements, and modifiers:
+/*------- [Elements] -------*/
+/*------- [Modifiers] -------*/
+
+
+
+/*================================================================================
+[12.0 Navigation Menu]
+*/
+
+.nav-menu {
+	font-size: 10px;
+
+	// Breakpoint overrides come before any child elements or modifiers
+	@media (min-width: @screen-sm-min) {
+		float: left;
+	}
+
+	/*------- [Elements] -------*/
+
+	// All sub-elements should have a comment that describes their function
+	&__list {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	// List item
+	&__item {
+		border-bottom: 1px solid #ccc;
+	}
+
+	// Individual item Link
+	&__link {
+		text-decoration: none;
+	}
+
+	// Menu icon
+	&__icon {
+		float: right;
+	}
+
+	/*------- [Modifiers] -------*/
+	// If modifiers are simple, you can nest them within the base module
+
+	/*------- [12.1 Navigation menu, Large] -------*/
+	&--lg {
+		font-size: 20px;
+	}
+}
+
+// More complicated modifiers should follow the original element. They should use the minor
+// TOC heading and be indented.
+
+	/*------- [12.2 Navigation Menu, Fancy] -------*/
+
+	.nav-menu--fancy {
+		font-style: italic;
+		border: 3px double dodgerblue;
+		padding: 8px;
+
+		@media (min-width: @screen-sm-min) {
+			border-width: 6px;
+			padding: 12px;
+		}
+	}
+
+/*================================================================================
+[13.0 Block Call-to-Action]
+*/
+
+.block-cta {
+	border: 1px solid #ccc;
+	padding: 10px;
+}

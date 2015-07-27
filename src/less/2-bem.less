@@ -1,0 +1,52 @@
+@import (reference) "lib/bootstrap/variables";
+
+// BEM (Block-element-modifier) is a methodology for thinking about and styling modules
+// BEM does not apply to:
+//	- Base HTML elements
+//	- Structural styles
+//	- Context-specific overrides (although BEM should reduce the need for these)
+
+// A *block* is the same thing as a module
+.nav-menu {
+	background: #ccc;
+	border: 1px solid #999;
+
+	// Remember, the styles above are mobile first. If you need to override for a certain breakpoint,
+	// do it with inline @media queries
+	@media (min-width: @screen-sm-min) {
+		float: left;
+		width: 50%;
+	}
+}
+
+	// An *element* is any HTML element, anywhere inside a block.
+	.nav-menu__item {
+		padding: 10px 0;
+		border-bottom: 1px solid #999;
+
+		// If you're using LESS or SASS, pseudo-elements may be nested
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	// The important thing to remember is that no matter how deeply your HTML elements are nested,
+	// your CSS rule set is always flat. The goal of BEM is to decouple the structure of CSS from the
+	// markup structure.
+	.nav-menu__link {
+		color: #999;
+		text-decoration: none;
+	}
+
+// Now let's say you want to create a variant of your basic nav-menu. BEM calls this a *modifier*.
+// You don't redefine everything in your modifier, it only overrides those properties that differ from the
+// base module. You use this in markup by combining both classes: <ul class="nav-menu nav-menu--lg">
+.nav-menu--lg {
+	font-size: 20px;
+
+	// If your block modifier needs to change the display of child elements, you may(?)
+	// nest overrides here
+	.nav-menu__item {
+		padding: 15px 0;
+	}
+}

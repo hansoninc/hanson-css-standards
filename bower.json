@@ -1,0 +1,8 @@
+{
+  "name": "css-standards-demo",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

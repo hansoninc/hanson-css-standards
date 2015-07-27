@@ -1,0 +1,76 @@
+/*------------------------------------------------------------------
+[ANTI-PATTERN]
+*/
+.nav-menu {
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	font-size: 10px;
+
+	// Issue 1: Keying styles to specific elements, rather than classes.
+	// Anti-pattern because: Using a different element invalidates the rule / cascade
+	ul {
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+
+		// Issue 2: Too much nesting
+		// Anti-pattern because: Each level of nesting adds more specificity and makes rules harder to override.
+		.menu-item {
+			padding: 10px 0;
+
+			// Issue 3: Too much specificity
+			// Anti-pattern because: The structure becomes more brittle because you can't insert or remove elements
+			// from the markup without destroying the cascade.
+			a {
+				color: red;
+			}
+		}
+	}
+}
+
+// Issue 4: Context-specific overrides
+// Anti-pattern because: Styles are now tied to a specific container / page class. If the page / container class is
+// too generic, these styles might be triggered by mistake. This pattern also encourages page-specific, rather than
+// module-specific thinking.
+.some-page {
+	.nav-menu {
+		// Issue 5: Styles for the same element in two different locations.
+		// Anti-pattern because: Styles are separated into multiple blocks, potentially on different screens /
+		// different files from the base style. Very difficult to merge / refactor later.
+		font-size: 20px;
+	}
+}
+
+/*------------------------------------------------------------------
+[BETTER PATTERN]
+*/
+
+// Unique module name, not limited to any specific context
+.nav-menu {
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	font-size: 10px;
+
+	.nav-menu__list {
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+
+	// Predictable, class-only specificity. It's easy for modules to override base element definitions
+	// and we're always incrementing specificity by 10.
+	.nav-menu__item {
+		padding: 10px 0;
+	}
+
+	// Elements within the block are not tied to specific markup structures.
+	.nav-menu__link {
+		color: red;
+	}
+}
+
+// This class name tells you why it varies from the base, not *where* in the site the override applies.
+// Semantically cleaner.
+.nav-menu--lg {
+	font-size: 20px;
+}

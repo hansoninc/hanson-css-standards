@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+### Node template
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
+bower_components
+
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+
+## Directory-based project format:
+.idea/
+
+## Output directory
+build/
