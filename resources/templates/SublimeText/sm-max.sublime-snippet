@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+@media (min-width: @screen-sm-max) {
+	${1}
+}
+]]></content>
+	<tabTrigger>sm-max</tabTrigger>
+</snippet>

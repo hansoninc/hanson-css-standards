@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+@media (min-width: @screen-xsl-min) {
+	${1}
+}
+]]></content>
+	<tabTrigger>xsl-min</tabTrigger>
+</snippet>
