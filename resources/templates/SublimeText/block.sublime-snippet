@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+/*================================================================================
+[${1:TOC}]
+*/
+
+.${3:BLOCK_NAME} {
+
+	/*------- [Elements] -------*/
+	
+	
+	/*------- [Modifiers] -------*/
+}
+]]></content>
+	<tabTrigger>block</tabTrigger>
+</snippet>
