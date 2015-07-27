@@ -1,0 +1,30 @@
+<templateSet group="BEM">
+  <template name="block" value="/*================================================================================&#10;[$TOC$]&#10;*/&#10;&#10;.$BLOCK_NAME$ {&#10;&#9;$END$&#10;&#9;&#10;&#9;/*------- [Elements] -------*/&#10;&#9;&#10;&#9;&#10;&#9;/*------- [Modifiers] -------*/&#10;&#9;&#10;&#9;&#10;}" description="BEM Block" toReformat="false" toShortenFQNames="true">
+    <variable name="TOC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BLOCK_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="elm" value="&amp;__$ELMNAME$ {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="ELMNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="mod" value="&amp;--$ELMNAME$ {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="ELMNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>
