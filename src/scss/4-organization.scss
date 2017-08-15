@@ -1,4 +1,4 @@
-@import (reference) "lib/bootstrap/variables";
+@import "lib/bootstrap/variables";
 
 // The best way to make your stylesheets readable is to keep them short, but modules within a stylesheet
 // still need to be organized. Sheets should have a table of contents, and there should be clear divisions
@@ -32,7 +32,7 @@
 	font-size: 10px;
 
 	// Breakpoint overrides come before any child elements or modifiers
-	@media (min-width: @screen-sm-min) {
+	@media (min-width: $screen-sm-min) {
 		float: left;
 	}
 
@@ -79,7 +79,7 @@
 		border: 3px double dodgerblue;
 		padding: 8px;
 
-		@media (min-width: @screen-sm-min) {
+		@media (min-width: $screen-sm-min) {
 			border-width: 6px;
 			padding: 12px;
 		}

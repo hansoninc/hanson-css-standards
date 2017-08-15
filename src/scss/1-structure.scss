@@ -1,4 +1,4 @@
-@import (reference) "lib/bootstrap/variables";
+@import "lib/bootstrap/variables";
 
 // This is a module. It is globally available in any context, at any breakpoint.
 // Modules are always defined at the *top level*. Never inside another selector, never inside a media query.
@@ -10,19 +10,19 @@
 	background: #f0f0f0;
 	padding: 20px;
 
-	// If you need to override the display of a module at larger breakpoints, use the LESS @media mixin syntax
+	// If you need to override the display of a module at larger breakpoints, use the SCSS @media mixin syntax
 	// Breakpoint overrides should always be arranged smallest to largest
 
-	// @screen-xsl (if using)
+	// $screen-xsl (if using)
 
-	// @screen-sm
-	@media (min-width: @screen-sm-min) {
-		// Make this module two-up at the @screen-sm breakpoint
+	// $screen-sm
+	@media (min-width: $screen-sm-min) {
+		// Make this module two-up at the $screen-sm breakpoint
 		float: left;
 		width: 48%;
 		margin-right: 2px;
 	}
 
-	// @screen-md
-	// @screen-lg
+	// $screen-md
+	// $screen-lg
 }

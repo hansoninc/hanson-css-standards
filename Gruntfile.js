@@ -60,9 +60,9 @@ module.exports = function (grunt) {
 		less: {
 			default: {
 				files: {
-					'build/css/1-structure.css': 'src/less/1-structure.less',
-					'build/css/2-bem.css': 'src/less/2-bem.less',
-					'build/css/3-nesting.css': 'src/less/3-nesting.less',
+					'build/css/1-structure.css': 'src/less/1-structure.scss',
+					'build/css/2-bem.css': 'src/less/2-bem.scss',
+					'build/css/3-nesting.css': 'src/less/3-nesting.scss',
 					'build/css/4-organization.css': 'src/less/4-organization.less',
 					'build/css/5-states-hooks.css': 'src/less/6-states-hooks.less',
 					'build/css/6-manifest.css': 'src/less/6-manifest.less'
