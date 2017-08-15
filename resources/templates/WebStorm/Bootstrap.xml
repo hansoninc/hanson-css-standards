@@ -1,57 +1,86 @@
 <templateSet group="Bootstrap">
-  <template name="sm-min" value="@media (min-width: @screen-sm-min) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="sm-min" value="@media (min-width: @screen-sm-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="md-min" value="@media (min-width: @screen-md-min) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="md-min" value="@media (min-width: @screen-md-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="lg-min" value="@media (min-width: @screen-lg-min) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="lg-min" value="@media (min-width: @screen-lg-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="xsl-min" value="@media (min-width: @screen-xsl-min) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="xsl-min" value="@media (min-width: @screen-xsl-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="md-max" value="@media (max-width: @screen-md-max) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="md-max" value="@media (max-width: @screen-md-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="sm-max" value="@media (max-width: @screen-sm-max) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="sm-max" value="@media (max-width: @screen-sm-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
       <option name="CSS" value="true" />
     </context>
   </template>
-  <template name="xsl-max" value="@media (max-width: @screen-xsl-max) {&#10;&#9;$END$&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="xsl-max" value="@media (max-width: @screen-xsl-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="CSS_PROPERTY_VALUE" value="true" />
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="xs-max" value="@media (max-width: @screen-xs-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="lgmn" value="@media (min-width: $screen-lg-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="mdmx" value="@media (max-width: $screen-md-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="mdmn" value="@media (min-width: $screen-md-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="smmx" value="@media (max-width: $screen-sm-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="smmn" value="@media (min-width: $screen-sm-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="xsmx" value="@media (max-width: $screen-xs-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="xsmn" value="@media (min-width: $screen-xs-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="xslmx" value="@media (max-width: $screen-xsl-max) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="xslmn" value="@media (min-width: $screen-xsl-min) {&#10;&#9;$END$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
       <option name="CSS" value="true" />
     </context>
   </template>
