@@ -64,7 +64,8 @@ module.exports = function (grunt) {
 					'build/css/2-bem.css': 'src/less/2-bem.less',
 					'build/css/3-nesting.css': 'src/less/3-nesting.less',
 					'build/css/4-organization.css': 'src/less/4-organization.less',
-					'build/css/5-manifest.css': 'src/less/5-manifest.less'
+					'build/css/5-states-hooks.css': 'src/less/6-states-hooks.less',
+					'build/css/6-manifest.css': 'src/less/6-manifest.less'
 				},
 				options: {
 					//sourceMap: true,

@@ -1,0 +1,59 @@
+/*================================================================================
+[States and hooks]
+*/
+
+.module {
+	// Our preferred way of making HTML modules interactive is by using *JavaScript hook classes*
+	// and *CSS states*
+
+	// Here's an interactive element within our module
+	&__btn {
+		background: red;
+		padding: 10px;
+		color: #fff;
+	}
+
+	/*
+	 * Anti-pattern:
+	 $('.module__btn').on('click', function() {
+		$(this).css('background', 'black');
+	 });
+	*/
+
+	// Don't modify CSS properties in JavaScript. It creates hard-to-track dependencies and makes
+	// code harder to port and refactor later.
+	// Instead of changing CSS properties in JavaScript, create a *state* class in your module.
+
+	/*------- [States] -------*/
+	&.state-clicked {
+		background: black;
+	}
+
+	/*
+	 * Less bad, but still an anti-pattern
+	 $('.module__btn').on('click', function() {
+		$(this).addClass('state-clicked');
+	 });
+	*/
+
+	// This is better, but still not ideal. If you tie JavaScript to BEM classes, and the module is
+	// later refactored, functionality can stop working unexpectedly.
+	// Instead, add a special *JavaScript hook class* to your HTML:
+
+	/*
+	 <div class="module">
+	    <button class="module__btn js-module-btn">Click Me</button>
+	 </div>
+	 */
+
+	// JavaScript hooks always begin with js- (e.g. js-module.btn). This way they can never be mistaken
+	// for anything else and the linkage between markup and behavior is obvious.
+
+	/*
+	 * Preferred approach to adding behaviors with JavaScript: Use your JavaScript hook as a selector
+	 * and add and remove states as necessary to change the display of your module.
+	 $('.js-module-btn').on('click', function() {
+		$(this).addClass('state-clicked');
+	 });
+	 */
+}
