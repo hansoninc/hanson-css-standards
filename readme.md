@@ -7,12 +7,13 @@ They will serve as a living reference and a starting point for our best practice
 
 ## Files:
 
-1. [Module Structure](src/less/1-structure.less)
-2. [BEM Syntax](src/less/2-bem.less)
-3. [Nesting](src/less/3-nesting.less)
-4. [Stylesheet Organization](src/less/4-organization.less)
-5. [States and JavaScript hooks](src/less/5-states-hooks.less)
-6. [Style Manifests](src/less/6-manifest.less)
+1. [Module Structure](src/less/1-structure.scss)
+2. [BEM Syntax](src/less/2-bem.scss)
+3. [Nesting](src/less/3-nesting.scss)
+4. [Stylesheet Organization](src/less/4-organization.scss)
+5. [States and JavaScript hooks](src/less/5-states-hooks.scss)
+6. [View styles](src/less/6-views.scss)
+7. [Style Manifests](src/less/7-manifest.scss)
 
 ## Helpful templates
 

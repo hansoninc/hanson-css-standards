@@ -1,0 +1,31 @@
+// Views are pages, panels, or other functional areas of the site or app
+// While we prefer to keep styles modular, there are sometimes legitimate one-off elements
+// that don't make sense to be modeled as modules or variants of modules
+// Views are namespaced .v-<name-of-view> and go in a views/_<name-of-view>.scss stylesheet
+.v-my-view {
+	// The .v-my-view class should be added to the <body>, <main> element, or a container
+	// that wraps all other elements of the page or view
+
+	// Sub-elements of a view should follow the normal BEM conventions
+	&__container {
+		border: 1px solid #ccc;
+	}
+
+	&__form {
+		border-bottom: 1px solid #ccc;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+
+	&__results {
+		background: #ccc;
+	}
+
+	// Keep your view code sparse, and use modules wherever possible.
+
+	// ANTI-PATTERN:
+	&__results-list {
+		// A list of results could be used anywhere - it's not specific to this view.
+		// Define a .results-list module instead.
+	}
+}
