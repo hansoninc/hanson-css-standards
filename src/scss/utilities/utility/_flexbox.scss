@@ -1,0 +1,290 @@
+//THESE STYLES EMULATE BOOTSTRAP 4's NEW FLEXBOX UTILITIES SO WE CAN BE FAMILIARIZED WITH THEM WHEN THEY RELEASE.
+// SEE https://getbootstrap.com/docs/4.0/utilities/flex/ for documentation and usage.
+//WHEN BOOTSTRAP 4 is more readily used this stylesheet can be dropped from utilities if necessary.
+
+// Differences between this and bootstrap 4's flexbox styles include the following changes:
+//===== '.d-flex' to just '.flex'
+//===== 'd-inline-flex' to '.inline-flex'
+//===== Breakpoint naming follows whats in the breakpoints array in _variables.scss instead of bootstrap default
+
+
+
+/*=================
+FLEX CONTAINER
+==================*/
+.flex {
+	display: flex;
+}
+.inline-flex {
+	display: inline-flex;
+}
+
+
+/*=================
+JUSTIFY CONTENT
+==================*/
+//Ex: .justify-content-start
+//Options: start, end, center, between, around, evenly
+@each $justify-content-key, $justify-content-value in $flex-justify {
+	.justify-content-#{$justify-content-key} {
+		justify-content: $justify-content-value !important;
+	}
+}
+
+
+/*=================
+ALIGN ITEMS
+==================*/
+//Ex: .align-items-start
+//Options: ( start, end, center, baseline, stretch )
+@each $align-key, $align-value in $flex-align {
+	.align-items-#{$align-key} {
+		align-items: $align-value !important;
+	}
+}
+
+
+/*=================
+ALIGN SELF
+==================*/
+//Ex: .align-self-start
+//Options: ( start, end, center, baseline, stretch )
+@each $align-key, $align-value in $flex-align {
+	.align-self-#{$align-key} {
+		align-self: $align-value !important;
+	}
+}
+
+/*=================
+FLEX DIRECTION
+==================*/
+//Ex: .flex-column
+//Options: ( row, column )
+@each $flex-direction-key, $flex-direction-value in $flex-direction {
+	.flex-#{$flex-direction-key} {
+		flex-direction: $flex-direction-value !important;
+	}
+}
+
+
+/*=================
+FLEX WRAP
+==================*/
+//Ex: .flex-wrap
+//Options: ( wrap, no-wrap, wrap-reverse )
+@each $flex-wrap-key, $flex-wrap-value in $flex-wrap {
+	.flex-#{$flex-wrap-key} {
+		flex-wrap: $flex-wrap-value !important;
+	}
+}
+
+
+
+/*=================
+FLEX ORDER
+==================*/
+//Ex: .order-2
+//Options: ( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12  )
+@each $order-key, $order-value in $flex-order {
+	.order-#{$order-key} {
+		order: $order-value !important;
+	}
+}
+
+
+
+/*=================
+ALIGN CONTENT
+==================*/
+//Ex: .align-content-start
+//Options: ( start, end, center, around, between, stretch  )
+@each $align-content-key, $align-content-value in $flex-align-content {
+	.align-content-#{$align-content-key} {
+		align-content: $align-content-value !important;
+	}
+}
+
+
+/*=================
+SHRINK/GROW
+==================*/
+//Ex: .flex-grow
+//Options: ( grow, shrink )
+@each $grow-shrink-key, $grow-shrink-value in $flex-grow-shrink {
+	.flex-#{$grow-shrink-key} {
+		flex: $grow-shrink-value !important;
+	}
+}
+
+
+/*=================
+FLEX EQUAL COLUMNS
+==================*/
+//Ex: .flex-columns-two
+//Options: ( one, two, three, four, five, six )
+@each $flex-columns-key, $flex-columns-value in $flex-columns {
+	.flex-columns-#{$flex-columns-key} {
+		> * {
+			flex: 1 1 $flex-columns-value !important;
+		}
+	}
+}
+
+
+
+/*=================
+RESPONSIVE BREAKPOINT VARIATIONS
+==================*/
+@each $bpkey, $bp in $breakpoints {
+	@media #{$bp} {
+
+		.flex-#{$bpkey} {
+			display: flex !important;
+		}
+
+		.inline-flex-#{$bpkey} {
+			display: inline-flex !important;
+		}
+
+		/*=================
+		RESPONSIVE JUSTIFY CONTENT
+		==================*/
+		@each $justify-content-key, $justify-content-value in $flex-justify {
+			.justify-content-#{$justify-content-key}-#{$bpkey} {
+				justify-content: $justify-content-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE ALIGN ITEMS
+		==================*/
+		@each $align-key, $align-value in $flex-align {
+			.align-items-#{$align-key}-#{$bpkey} {
+				align-items: $align-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE ALIGN SELF
+		==================*/
+		@each $align-key, $align-value in $flex-align {
+			.align-self-#{$align-key}-#{$bpkey} {
+				align-self: $align-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE FLEX DIRECTION
+		==================*/
+		@each $flex-direction-key, $flex-direction-value in $flex-direction {
+			.flex-#{$flex-direction-key}-#{$bpkey} {
+				flex-direction: $flex-direction-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE FLEX WRAP
+		==================*/
+		@each $flex-wrap-key, $flex-wrap-value in $flex-wrap {
+			.flex-#{$flex-wrap-key}-#{$bpkey} {
+				flex-wrap: $flex-wrap-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE FLEX ORDER
+		==================*/
+		@each $order-key, $order-value in $flex-order {
+			.order-#{$order-key}-#{$bpkey} {
+				order: $order-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE ALIGN CONTENT
+		==================*/
+		@each $align-content-key, $align-content-value in $flex-align-content {
+			.align-content-#{$align-content-key}-#{$bpkey} {
+				align-content: $align-content-value !important;
+			}
+		}
+
+		/*=================
+		RESPONSIVE GROW/SHRINK
+		==================*/
+		@each $grow-shrink-key, $grow-shrink-value in $flex-grow-shrink {
+			.flex-#{$grow-shrink-key}-#{$bpkey} {
+				flex: $grow-shrink-value !important;
+			}
+		}
+	}
+}
+
+
+
+
+/*=================
+AUTO MARGINS USED WITH JUSTIFY CONTENT
+==================*/
+
+.mr-auto {  margin-right: auto !important;  }
+.ml-auto {  margin-left: auto !important;  }
+.mt-auto {  margin-top: auto !important;  }
+.mb-auto {  margin-bottom: auto !important;  }
+
+
+
+/*=================
+FLEX LIST
+==================*/
+.flex-list {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+
+	&__item {
+
+	}
+
+	&--one-column {
+		.flex-list__item {
+			@include make-xs-column(12);
+			@include make-xsl-column(12);
+			@include make-sm-column(12);
+			@include make-md-column(12);
+			@include make-lg-column(12);
+		}
+	}
+
+	&--two-column {
+		.flex-list__item {
+			@include make-xs-column(12);
+			@include make-xsl-column(12);
+			@include make-sm-column(6);
+			@include make-md-column(6);
+			@include make-lg-column(6);
+		}
+	}
+
+	&--three-column {
+		.flex-list__item {
+			@include make-xs-column(12);
+			@include make-xsl-column(12);
+			@include make-sm-column(4);
+			@include make-md-column(4);
+			@include make-lg-column(4);
+		}
+	}
+
+	&--four-column {
+		.flex-list__item {
+			@include make-xs-column(12);
+			@include make-xsl-column(6);
+			@include make-sm-column(6);
+			@include make-md-column(3);
+			@include make-lg-column(3);
+		}
+	}
+}

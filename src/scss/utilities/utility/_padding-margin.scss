@@ -1,0 +1,207 @@
+//BUILD DATA
+//THIS DATA IS USED BY THE SASS FUNCTION BELOW TO
+//RUN A LOOP AND CREATE ALL THE NECESSARY HELPER CLASSES FOR PADDING AND MARGIN
+
+//CSS WILL OUTPUT LIKE SO:
+//.padding-{direction || direction-combo}-{size}
+//.padding-{direction || direction-combo}-{size}-{breakpoint}-{scope}
+//.margin-{direction || direction-combo}-{size}
+//.margin-{direction || direction-combo}-{size}-{breakpoint}-{scope}
+
+//EXAMPLES
+//.padding-left-large
+//.padding-vertical-huge
+//.padding-right-large-sm-only
+//.padding-right-large-sm-up
+//.margin-right-small-xsl-only
+//...etc
+
+//VARIABLES ARE SET IN core/_variables.scss
+
+$types: (
+		type1:      margin,
+		type2:      padding
+);
+$sizes: (
+		none:       $none,
+		tiny:       $tiny,
+		small:      $small,
+		medium:     $medium,
+		large:      $large,
+		huge:       $huge,
+		giant:      $giant,
+		massive:    $massive
+);
+$directions: (
+		dir1:       left,
+		dir2:       right,
+		dir3:       top,
+		dir4:       bottom
+);
+$dirCombo: (
+		combo1:     vertical,
+		combo2:     horizontal,
+		combo3:     all,
+		combo4:     none
+);
+
+
+//$breakpoints VARIABLE IS DEFINED IN VARIABLES.SCSS AS IT IS SHARED AMONGST OTHER UTILITIES
+
+
+//DIRECTIONAL PADDING AND MARGINS - (Ex. .padding-left-large, margin-top-small, etc)
+@each $key, $type in $types {
+	@each $sizekey, $size in $sizes  {
+		@each $key, $direction in $directions {
+			@if $type == margin {
+				.margin-#{$direction}-#{$sizekey} {
+					margin-#{$direction}: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								margin-#{$direction}: $size !important;
+							}
+						}
+					}
+				}
+			}
+			@if $type == padding {
+				.padding-#{$direction}-#{$sizekey} {
+					padding-#{$direction}: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								padding-#{$direction}: $size !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//SCENARIO MARGINS AND PADDING ((all, none, horizontal, vertical), Ex. margin-all-large, padding-vertical-medium, etc)
+@each $key, $type in $types {
+	@each $sizekey, $size in $sizes {
+		@each $key, $dirCo in $dirCombo {
+			@if $dirCo == vertical and $type == padding {
+				.padding-vertical-#{$sizekey} {
+					padding-top: $size!important;
+					padding-bottom: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								padding-top: $size!important;
+								padding-bottom: $size!important;
+							}
+						}
+					}
+				}
+			}
+			@if $dirCo == horizontal and $type == padding{
+				.padding-horizontal-#{$sizekey} {
+					padding-left: $size!important;
+					padding-right: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								padding-left: $size !important;
+								padding-right: $size !important;
+							}
+						}
+					}
+				}
+			}
+			@if $dirCo == all and $type == padding{
+				.padding-all-#{$sizekey} {
+					padding: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								padding: $size !important;
+							}
+						}
+					}
+				}
+			}
+			@if $dirCo == vertical and $type == margin {
+				.margin-vertical-#{$sizekey} {
+					margin-top: $size!important;
+					margin-bottom: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								margin-top: $size !important;
+								margin-bottom: $size !important;
+							}
+						}
+					}
+				}
+			}
+			@if $dirCo == horizontal and $type == margin{
+				.margin-horizontal-#{$sizekey} {
+					margin-left: $size!important;
+					margin-right: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								margin-left: $size !important;
+								margin-right: $size !important;
+							}
+						}
+					}
+				}
+			}
+			@if $dirCo == all and $type == margin{
+				.margin-all-#{$sizekey} {
+					margin: $size!important;
+
+					@each $bpkey, $bp in $breakpoints {
+						&-#{$bpkey} {
+							@media #{$bp} {
+								margin: $size !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	@if $type == padding {
+		.padding-none {
+			padding: 0!important;
+
+			@each $bpkey, $bp in $breakpoints {
+				&-#{$bpkey} {
+					@media #{$bp} {
+						padding: 0 !important;
+					}
+				}
+			}
+		}
+	}
+
+	@if $type == margin {
+		.margin-none {
+			margin: 0!important;
+
+			@each $bpkey, $bp in $breakpoints {
+				&-#{$bpkey} {
+					@media #{$bp} {
+						margin: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}

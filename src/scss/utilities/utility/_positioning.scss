@@ -1,0 +1,30 @@
+//BUILD DATA
+//THIS DATA IS USED BY THE SASS FUNCTION BELOW TO
+//RUN A LOOP AND CREATE ALL THE NECESSARY HELPER CLASSES FOR POSITIONING
+
+//CSS WILL OUTPUT CLASSES IN THE $positioning VARIABLE in _variables.scss:
+//.position-{value}
+//.position-{value}--{breakpoint}-{scope}
+
+//EXAMPLES
+//.position-relative
+//.position-relative--sm-up
+//...etc
+
+
+@each $position-key, $position-value in $positioning {
+	.position-#{$position-key} {
+		//breakpoints variable is ahared and defined in variables.scss
+		position: $position-value !important;
+	}
+
+	//RESPONSIVE MODIFIERS
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.position-#{$position-key}--#{$bpkey} {
+				//breakpoints variable is ahared and defined in variables.scss
+				position: $position-value !important;
+			}
+		}
+	}
+}

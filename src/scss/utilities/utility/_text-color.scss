@@ -1,0 +1,30 @@
+//BUILD DATA
+//THIS DATA IS USED BY THE SASS FUNCTION BELOW TO
+//RUN A LOOP AND CREATE ALL THE NECESSARY HELPER CLASSES FOR TEXT COLOR
+
+//CSS WILL OUTPUT CLASSES IN THE $brand-colors VARIABLE in _variables.scss:
+//.text-{color}
+
+//EXAMPLES
+//.text-han-purple
+//.text-han-dark-gray
+//...etc
+
+
+@each $text-color-key, $text-color-value in $brand-colors {
+	.text-#{$text-color-key} {
+		//breakpoints variable is ahared and defined in variables.scss
+		color: $text-color-value !important;
+	}
+
+	//RESPONSIVE MODIFIERS
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.text-#{$text-color-key}--#{$bpkey} {
+				//breakpoints variable is ahared and defined in variables.scss
+				color: $text-color-value !important;
+			}
+		}
+	}
+}
+

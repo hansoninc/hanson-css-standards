@@ -55,6 +55,14 @@
 
 @include make-grid(xs);
 
+// XSL Tablet grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-xsl-min) {
+	@include make-grid(xsl);
+}
 
 // Small grid
 //
@@ -64,6 +72,9 @@
 @media (min-width: $screen-sm-min) {
   @include make-grid(sm);
 }
+
+
+
 
 
 // Medium grid

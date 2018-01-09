@@ -1,0 +1,31 @@
+//THIS DATA IS USED BY THE SASS FUNCTION BELOW TO
+//RUN A LOOP AND CREATE ALL THE NECESSARY HELPER CLASSES FOR BG COLOR
+
+//CSS WILL OUTPUT CLASSES IN THE $brand-colors VARIABLE in _variables.scss:
+//.bg-{color}
+
+/*=============
+EXAMPLE USAGE
+===============*/
+//.bg-han-purple
+//.bg-han-dark-gray
+//.bg-han-purple-sm-up
+//...etc
+
+
+@each $bg-color-key, $bg-color-value in $brand-colors {
+	.bg-#{$bg-color-key} {
+		//breakpoints variable is ahared and defined in variables.scss
+		background-color: $bg-color-value !important;
+	}
+
+	//RESPONSIVE MODIFIERS
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.bg-#{$bg-color-key}-#{$bpkey} {
+				//breakpoints variable is ahared and defined in variables.scss
+				background-color: $bg-color-value !important;
+			}
+		}
+	}
+}

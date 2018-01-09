@@ -1,0 +1,31 @@
+//BUILD DATA
+//THIS DATA IS USED BY THE SASS FUNCTION BELOW TO
+//RUN A LOOP AND CREATE ALL THE NECESSARY HELPER CLASSES FOR TEXT ALIGNMENT
+
+//CSS WILL OUTPUT CLASSES IN THE $text-alignment VARIABLE in _variables.scss:
+//.text-{direction}-{breakpoint}-{scope}
+
+//EXAMPLES
+//.text-left-sm-only
+//.text-right-md-up
+//...etc
+
+//Boostrap has this built in but doing it this way allows for it to be responsive
+
+@each $text-alignment-key, $text-alignment-value in $text-alignment {
+	.text-#{$text-alignment-key} {
+		//breakpoints variable is ahared and defined in variables.scss
+		text-align: $text-alignment-value !important;
+	}
+
+	//RESPONSIVE MODIFIERS
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.text-#{$text-alignment-key}-#{$bpkey} {
+				//breakpoints variable is ahared and defined in variables.scss
+				text-align: $text-alignment-value !important;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,175 @@
+/*==============
+PADDING AND MARGIN DEFAULTS
+==============*/
+$none:                  0;
+$tiny:                  5px;
+$small:                 10px;
+$medium:                20px;
+$large:                 30px;
+$huge:                  45px;
+$giant:                 60px;
+$massive:               90px;
+
+
+/*==============
+//MEDIA QUERIES
+==============*/
+$xs-only:               "(max-width: 767px)";
+$xsl-up:                "(min-width: 480px)";
+$xsl-to-sm:             "(min-width: 480px) and (max-width: 991px)";
+$xsl-only:              "(min-width: 480px) and (max-width: 767px)";
+$sm-up:                 "(min-width: 768px)";
+$sm-down:               "(max-width: 991px)";
+$sm-only:               "(min-width: 768px) and (max-width: 991px)";
+$md-up:                 "(min-width: 992px)";
+$md-only:               "(min-width: 992px) and (max-width: 1199px)";
+$lg-up:                 "(min-width: 1200px)";
+
+
+/*==============
+//BRAND COLORS ARRAY
+===============*/
+$brand-colors: (
+	han-purple:         #3E1951,
+	han-dark-gray:      #302B39,
+	han-light-gray:     #eee,
+	white:              #fff
+);
+
+//Create Individual Variables We can use for items in the array as well
+//Variable Name will match up with the key name
+@each $color-var-key, $color-var-value in $brand-colors {
+	//$#{$color-var-key}: $color-var-value;
+}
+
+
+/*=============
+BREAKPOINTS ARRAY
+==============*/
+$breakpoints: (
+	xs-only:            $xs-only,
+	xsl-up:             $xsl-up,
+	xsl-to-sm:          $xsl-to-sm,
+	xsl-only:           $xsl-only,
+	sm-up:              $sm-up,
+	sm-down:            $sm-down,
+	sm-only:            $sm-only,
+	md-up:              $md-up,
+	md-only:            $md-only,
+	lg-up:              $lg-up
+);
+
+
+
+/*=============
+FLEXBOX GROUPINGS
+===============*/
+$flex-justify: (
+	start:              flex-start,
+	end:                flex-end,
+	center:             center,
+	between:            space-between,
+	around:             space-around,
+	evenly:             space-evenly
+);
+
+$flex-align: (
+	start:              flex-start,
+	end:                flex-end,
+	center:             center,
+	baseline:           baseline,
+	stretch:            stretch
+);
+
+$flex-direction: (
+	row:                row,
+	row-reverse:        row-reverse,
+	column:             column,
+	column-reverse:     column-reverse
+);
+
+$flex-align-self: (
+	row:                row,
+	row-reverse:        row-reverse,
+	column:             column,
+	column-reverse:     column-reverse
+);
+
+$flex-wrap: (
+	nowrap:             nowrap,
+	wrap:               wrap,
+	wrap-reverse:       wrap-reverse,
+);
+
+$flex-order: (
+	1:                  1,
+	2:                  2,
+	3:                  3,
+	4:                  4,
+	5:                  5,
+	6:                  6,
+	7:                  7,
+	8:                  8,
+	9:                  9,
+	10:                 10,
+	11:                 11,
+	12:                 12
+);
+
+$flex-align-content: (
+	start:              flex-start,
+	end:                flex-end,
+	center:             center,
+	between:            space-between,
+	around:             space-around,
+	stretch:            stretch,
+);
+
+$flex-grow-shrink: (
+	auto:               0 0 auto,
+	shrink:             0 0 0,
+	grow:               1 1 0,
+);
+
+$flex-columns: (
+	one:                100%,
+	two:                50%,
+	three:              33.33%,
+	four:               25%,
+	five:               20%,
+	six:                16.66%
+);
+
+
+
+/*=============
+PULLS ARRAY
+================*/
+$pull-directions: (
+	left:               left,
+	right:              right,
+	none:               none
+);
+
+
+
+/*=================
+TEXT ALIGNMENT ARRAY
+==================*/
+$text-alignment: (
+	left:               left,
+	right:              right,
+	center:             center
+);
+
+
+
+/*=================
+POSITIONING ARRAY
+==================*/
+$positioning: (
+	relative:           relative,
+	static:             static,
+	absolute:           absolute,
+	fixed:              fixed
+);

@@ -3,12 +3,21 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-bake');
 	grunt.loadNpmTasks('grunt-combine-mq');
 	grunt.initConfig({
-		bake: {default: {files: {'build/example.html': 'src/example.html'}}},
+		bake: {
+			default: {
+				files: {
+					'build/example.html': 'src/example.html',
+					'build/scss-example.html': 'src/scss-example.html'
+				}
+			}
+		},
 		connect: {
 			server: {
 				options: {
@@ -72,6 +81,30 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+
+		sass: {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				files: {
+					'build/css/scss/scss-global.css': 'src/scss/global.scss',
+					'build/css/scss/scss-styleguide.css': 'src/scss/scss-styleguide.scss'
+				}
+			}
+		},
+		postcss: {
+			options: {
+				map: true,
+
+				processors: [
+					require('autoprefixer')({browsers: 'last 2 versions'}),
+				]
+			},
+			dist: {
+				src: 'build/css/*.css'
+			}
+		},
 		combine_mq: {
 			options: {
 
@@ -87,6 +120,11 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
+			sass: {
+				files: ['src/**/*.scss'],
+				tasks: ['css'],
+				options: { livereload: true }
+			},
 			less: {
 				files: ['src/**/*.less'],
 				tasks: ['less', 'combine_mq'],
@@ -108,11 +146,16 @@ module.exports = function (grunt) {
 	});
 	grunt.registerTask('default', [
 		'less',
+		'sass',
+		'postcss',
 		'bake',
 		'copy'
 	]);
 
 	grunt.registerTask('css', [
-		'less', 'combine_mq'
+		'less',
+		'combine_mq',
+		'sass',
+		'postcss'
 	]);
 };
