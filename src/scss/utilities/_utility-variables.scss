@@ -1,6 +1,7 @@
-/*==============
-PADDING AND MARGIN DEFAULTS
-==============*/
+//================================================================================
+// Padding and margin defaults
+//
+// TODO: Turn this into an array like we've done for brand colors, etc.
 $none:                  0;
 $tiny:                  5px;
 $small:                 10px;
@@ -11,9 +12,10 @@ $giant:                 60px;
 $massive:               90px;
 
 
-/*==============
-//MEDIA QUERIES
-==============*/
+//================================================================================
+// Media queries
+//
+// TODO: These should be based on / generated from the Bootstrap media classes
 $xs-only:               "(max-width: 767px)";
 $xsl-up:                "(min-width: 480px)";
 $xsl-to-sm:             "(min-width: 480px) and (max-width: 991px)";
@@ -26,9 +28,9 @@ $md-only:               "(min-width: 992px) and (max-width: 1199px)";
 $lg-up:                 "(min-width: 1200px)";
 
 
-/*==============
-//BRAND COLORS ARRAY
-===============*/
+//================================================================================
+// Brand colors
+//
 $brand-colors: (
 	han-purple:         #3E1951,
 	han-dark-gray:      #302B39,
@@ -38,14 +40,15 @@ $brand-colors: (
 
 //Create Individual Variables We can use for items in the array as well
 //Variable Name will match up with the key name
+// TODO Is this still in use?
 @each $color-var-key, $color-var-value in $brand-colors {
 	//$#{$color-var-key}: $color-var-value;
 }
 
 
-/*=============
-BREAKPOINTS ARRAY
-==============*/
+//================================================================================
+// Breakpoints
+//
 $breakpoints: (
 	xs-only:            $xs-only,
 	xsl-up:             $xsl-up,
@@ -61,9 +64,9 @@ $breakpoints: (
 
 
 
-/*=============
-FLEXBOX GROUPINGS
-===============*/
+//================================================================================
+// Flexbox-related variables
+//
 $flex-justify: (
 	start:              flex-start,
 	end:                flex-end,
@@ -101,6 +104,7 @@ $flex-wrap: (
 	wrap-reverse:       wrap-reverse,
 );
 
+// @TODO Make this a mixin and extend it past 12
 $flex-order: (
 	1:                  1,
 	2:                  2,
@@ -142,9 +146,9 @@ $flex-columns: (
 
 
 
-/*=============
-PULLS ARRAY
-================*/
+//================================================================================
+// Float / pull
+//
 $pull-directions: (
 	left:               left,
 	right:              right,
@@ -153,9 +157,9 @@ $pull-directions: (
 
 
 
-/*=================
-TEXT ALIGNMENT ARRAY
-==================*/
+//================================================================================
+// Text alignment
+//
 $text-alignment: (
 	left:               left,
 	right:              right,
@@ -164,9 +168,9 @@ $text-alignment: (
 
 
 
-/*=================
-POSITIONING ARRAY
-==================*/
+//================================================================================
+// Positioning
+//
 $positioning: (
 	relative:           relative,
 	static:             static,

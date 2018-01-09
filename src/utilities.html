@@ -14,168 +14,42 @@
 
 	<script src="js/lib/modernizr-2.6.2.min.js"></script>
 
-	<!-- Move Bootstrap into your project directory to start! -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="css/scss/scss-styleguide.css">
+	<link rel="stylesheet" href="css/example.css">
 </head>
 <!-- Standard init -->
 <body data-section="" data-page="">
 
 <!--(bake includes/header.html)-->
 
-<div class="wrapper">
+<div class="wrapper v-utilities-example">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1>Hanson Utilities</h1>
 				<p class="margin-bottom-giant">Below is a collection of New Hanson Utilities that are now included during compilation. All utility styles are responsive.</p>
 
-				<h3 class="text-han-purple">Padding/Margin Utility</h3>
-				<p>Just replace the word <strong>"padding"</strong> with <strong>"margin"</strong> to use either one</p>
+				<div class="alert alert-info">
+					<p><strong>TODO:</strong> Include a table of contents, list each of the included modules</p>
+					<ul>
+						<li>Padding and margin</li>
+						<li>Text colors</li>
+						<li>Background colors</li>
+						<li>Non-breaking space</li>
+						<li>Breakpoints(?)</li>
+						<li>Flex utilities (Bootstrap 3 only)</li>
+						<li>Pull</li>
+						<li>Text alignment</li>
+						<li>Positioning</li>
+					</ul>
+				</div>
+
 				<hr>
-				<h4>Directional</h4>
-				<div class="flex-sm-up">
-					<div class="flex-grow-sm-up">
-						.padding-left-none<br>
-						.padding-left-tiny<br>
-						.padding-left-small<br>
-						.padding-left-medium<br>
-						.padding-left-large<br>
-						.padding-left-huge<br>
-						.padding-left-giant<br>
-						.padding-left-massive
-					</div>
-					<div class="flex-grow-sm-up">
-						.padding-right-none<br>
-						.padding-right-tiny<br>
-						.padding-right-small<br>
-						.padding-right-medium<br>
-						.padding-right-large<br>
-						.padding-right-huge<br>
-						.padding-right-giant<br>
-						.padding-right-massive
-					</div>
-					<div class="flex-grow-sm-up">
-						.padding-top-none<br>
-						.padding-top-tiny<br>
-						.padding-top-small<br>
-						.padding-top-medium<br>
-						.padding-top-large<br>
-						.padding-top-huge<br>
-						.padding-top-giant<br>
-						.padding-top-massive
-					</div>
-					<div class="flex-grow-sm-up">
-						.padding-bottom-none<br>
-						.padding-bottom-tiny<br>
-						.padding-bottom-small<br>
-						.padding-bottom-medium<br>
-						.padding-bottom-large<br>
-						.padding-bottom-huge<br>
-						.padding-bottom-giant<br>
-						.padding-bottom-massive
-					</div>
-				</div>
+
+				<!--(bake includes/margin-padding.html)-->
 				<hr>
-				<h4>Direction Combos</h4>
-				<div class="flex-sm-up">
-					<div class="flex-grow-sm-up">
-						.padding-vertical-none<br>
-						.padding-vertical-tiny<br>
-						.padding-vertical-small<br>
-						.padding-vertical-medium<br>
-						.padding-vertical-large<br>
-						.padding-vertical-huge<br>
-						.padding-vertical-giant<br>
-						.padding-vertical-massive
-					</div>
-					<div class="flex-grow-sm-up">
-						.padding-all-none<br>
-						.padding-all-tiny<br>
-						.padding-all-small<br>
-						.padding-all-medium<br>
-						.padding-all-large<br>
-						.padding-all-huge<br>
-						.padding-all-giant<br>
-						.padding-all-massive
-					</div>
-					<div class="flex-grow-sm-up">
-						.padding-horizontal-none<br>
-						.padding-horizontal-tiny<br>
-						.padding-horizontal-small<br>
-						.padding-horizontal-medium<br>
-						.padding-horizontal-large<br>
-						.padding-horizontal-huge<br>
-						.padding-horizontal-giant<br>
-						.padding-horizontal-massive
-					</div>
-					<div class="flex-grow-sm-up">
-						&nbsp;
-					</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny margin-top-giant">
-					<div class="padding-left-tiny">.padding-left-tiny</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-left-small">.padding-left-small</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-left-medium">.padding-left-medium</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-left-large">.padding-left-large</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-left-huge">.padding-left-huge</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-left-giant">.padding-left-giant</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-left-massive">.padding-left-massive</div>
-				</div>
-
-				<figure class="margin-top-medium margin-bottom-giant">
-					<pre>
-						<code class="language-html" data-lang="html">
-&lt;div class="padding-left-tiny"&gt;.padding-left-tiny&lt;/div&gt;
-&lt;div class="padding-left-small"&gt;.padding-left-small&lt;/div&gt;
-&lt;div class="padding-left-medium"&gt;.padding-left-medium&lt;/div&gt;
-
-<div><strong>Responsive Examples</strong></div>&lt;div class="padding-left-large-sm-up"&gt;.padding-left-large-sm-up&lt;/div&gt;
-&lt;div class="padding-left-huge-md-up"&gt;.padding-left-huge-md-up&lt;/div&gt;
-&lt;div class="padding-left-giant-lg-up"&gt;.padding-left-giant-lg-up&lt;/div&gt;
-&lt;div class="padding-left-massive-sm-only"&gt;.padding-left-massive-sm-only&lt;/div&gt;
-						</code>
-					</pre>
-				</figure>
-
-
-
-				<div class="sg-pad-container margin-bottom-tiny margin-top-huge">
-					<div class="padding-vertical-tiny text-center">.padding-vertical-tiny</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-vertical-small text-center">.padding-vertical-small</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-vertical-medium text-center">.padding-vertical-medium</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-vertical-large text-center">.padding-vertical-large</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-vertical-huge text-center">.padding-vertical-huge</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-vertical-giant text-center">.padding-vertical-giant</div>
-				</div>
-				<div class="sg-pad-container margin-bottom-tiny">
-					<div class="padding-vertical-massive text-center">.padding-vertical-massive</div>
-				</div>
-
 
 				<h3 class="text-han-purple margin-top-massive">Flexbox Utilities</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include file like margin-padding.html.
+				I would really like this to be derived from the breakpoints in Bootstrap. Can we discuss how this might be possible?</div>
 				<p class="margin-bottom-large">Hansons flexbox utilities are currently emulating the bootstrap 4 flexbox utilities set so that we can be ready to use these utilities in bootstrap 4 when it is officially released and more readiliy used.</p>
 				<h4>Display Flex</h4>
 				<div class="flex sg-sample-flex padding-all-small">
@@ -942,8 +816,10 @@
 
 
 				<h3 class="text-han-purple margin-top-massive">BG Color</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include, discuss where these are found (in variables) and how to add your own colors to the array and generate text and background chips</div>
 				<p>Utility creates a background color for each color in the $brand-colors array in variables.scss</p>
 
+				<div class="alert alert-info"><strong>TODO:</strong> This should be generated from the contents of the colors array</div>
 				<div>
 					<div class="padding-all-large text-white margin-right-medium bg-han-purple">bg-han-purple</div>
 					<div class="padding-all-large text-white margin-right-medium bg-han-dark-gray">bg-han-dark-gray</div>
@@ -959,11 +835,14 @@
 					</pre>
 				</figure>
 
+				<hr>
 
 
 				<h3 class="text-han-purple margin-top-massive">Text Color</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include, discuss where these are found (in variables) and how to add your own colors to the array and generate text and background chips</div>
 				<p>Utility creates a text color for each color in the $brand-colors array in variables.scss</p>
 
+				<div class="alert alert-info"><strong>TODO:</strong> This should be generated from the contents of the colors array</div>
 				<div>
 					<div class="padding-all-small margin-right-medium text-han-purple">text-han-purple</div>
 					<div class="padding-all-small margin-right-medium text-han-dark-gray">text-han-dark-gray</div>
@@ -979,9 +858,11 @@
 					</pre>
 				</figure>
 
+				<hr>
 
 
 				<h3 class="text-han-purple margin-top-massive">Pulls</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include, add a better explanation of what's happening below (when you have right at sm-down and left at md-up, for example)</div>
 				<p>Pull classes are standard to bootstrap, however they are not responsive. These pulls are responsive and you have the ability to use the pull-none class which doesnt exist in bootstrap</p>
 
 				<div>
@@ -1011,10 +892,11 @@
 					</pre>
 				</figure>
 
-
+				<hr>
 
 
 				<h3 class="text-han-purple margin-top-massive">Positioning</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include</div>
 				<p>Allows you to set the positioning class on an element, these are not built into bootstrap 3 but will be in bootstrap 4. Most like position-relative would be the most common use for creating containers for absolute positioned elements.</p>
 				<figure class="margin-top-medium margin-bottom-giant highlight">
 					<pre>
@@ -1030,6 +912,7 @@
 
 
 				<h3 class="text-han-purple margin-top-massive">Text Alignment</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include</div>
 				<p>This is also included in bootstrap 3 but is not responsive. This utility makes these styles responsive.</p>
 
 				<div class="text-right-sm-up margin-top-large">Text aligns right on lg and above</div>
@@ -1047,6 +930,7 @@
 
 
 				<h3 class="text-han-purple margin-top-massive">Non Breaking Space</h3>
+				<div class="alert alert-info"><strong>TODO:</strong> Break this into a separate include</div>
 				<figure class="margin-top-medium margin-bottom-giant highlight">
 					<pre>
 						<code class="language-html" data-lang="html">
