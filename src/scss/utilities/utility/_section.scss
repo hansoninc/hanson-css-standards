@@ -18,33 +18,30 @@
 		}
 	}
 
-	.section-#{$section-key}-no-top {
+	.section-#{$section-key}-top {
 		//specify top and bottom so we dont overwrite any left and right padding that may be on a section
-		padding-top: 0 !important;
-		padding-bottom: $section-value !important;
-
-		@each $bpkey, $bp in $breakpoints {
-			@media #{$bp} {
-				.section-#{$section-key}-no-top-#{$bpkey} {
-					padding-top: 0 !important;
-					padding-bottom: $section-value !important;
-				}
-			}
-		}
-	}
-
-	.section-#{$section-key}-no-bottom {
-		//specify top and bottom so we dont overwrite any left and right padding that may be on a section
-		padding-top: $section-value !important;
 		padding-bottom: 0 !important;
+	}
 
-		@each $bpkey, $bp in $breakpoints {
-			@media #{$bp} {
-				.section-#{$section-key}-no-bottom-#{$bpkey} {
-					padding-top: $section-value !important;
-					padding-bottom: $section-value !important;
-				}
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.section-#{$section-key}-top-#{$bpkey} {
+				padding-bottom: 0 !important;
 			}
 		}
 	}
+
+	/* ----- */
+	.section-#{$section-key}-bottom {
+		padding-top: 0 !important;
+	}
+
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.section-#{$section-key}-bottom-#{$bpkey} {
+				padding-top: 0 !important;
+			}
+		}
+	}
+
 }
