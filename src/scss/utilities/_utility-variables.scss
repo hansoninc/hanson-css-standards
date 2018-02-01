@@ -1,49 +1,44 @@
 //================================================================================
 // Padding and margin defaults
 //
-// TODO: Turn this into an array like we've done for brand colors, etc.
-$none:                  0;
-$tiny:                  5px;
-$small:                 10px;
-$medium:                20px;
-$large:                 30px;
-$huge:                  45px;
-$giant:                 60px;
-$massive:               90px;
 
+$spacing: (
+	none:       0,
+	micro:      3px,
+	tiny:       6px,
+	small:      12px,
+	medium:     18px,
+	large:      24px,
+	huge:       30px,
+	giant:      42px,
+	massive:    60px
+);
 
 //================================================================================
 // Media queries
 //
-// TODO: These should be based on / generated from the Bootstrap media classes
-$xs-only:               "(max-width: 767px)";
-$xsl-up:                "(min-width: 480px)";
-$xsl-to-sm:             "(min-width: 480px) and (max-width: 991px)";
-$xsl-only:              "(min-width: 480px) and (max-width: 767px)";
-$sm-up:                 "(min-width: 768px)";
-$sm-down:               "(max-width: 991px)";
-$sm-only:               "(min-width: 768px) and (max-width: 991px)";
-$md-up:                 "(min-width: 992px)";
-$md-only:               "(min-width: 992px) and (max-width: 1199px)";
-$lg-up:                 "(min-width: 1200px)";
+
+$xs-only:               "(max-width: #{$screen-xsl-max})";
+$xsl-up:                "(min-width: #{$screen-xsl-min})";
+$xsl-to-sm:             "(min-width: #{$screen-xsl-min}) and (max-width: #{$screen-sm-max})";
+$xsl-only:              "(min-width: #{$screen-xsl-min}) and (max-width: #{$screen-xsl-max})";
+$sm-up:                 "(min-width: #{$screen-sm-min})";
+$sm-down:               "(max-width: #{$screen-sm-max})";
+$sm-only:               "(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";
+$md-up:                 "(min-width: #{$screen-md-min})";
+$md-only:               "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
+$lg-up:                 "(min-width: #{$screen-lg-min})";
 
 
 //================================================================================
 // Brand colors
 //
 $brand-colors: (
-	han-purple:         #3E1951,
-	han-dark-gray:      #302B39,
-	han-light-gray:     #eee,
-	white:              #fff
+	purple:         #3E1951,
+	dark-gray:      #302B39,
+	light-gray:     #eee,
+	white:          #fff
 );
-
-//Create Individual Variables We can use for items in the array as well
-//Variable Name will match up with the key name
-// TODO Is this still in use?
-@each $color-var-key, $color-var-value in $brand-colors {
-	//$#{$color-var-key}: $color-var-value;
-}
 
 
 //================================================================================

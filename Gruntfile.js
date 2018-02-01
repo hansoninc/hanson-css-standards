@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 		connect: {
 			server: {
 				options: {
-					port: 3000,
+					port: 2000,
 					keepalive: true,
 					livereload: true,
 					base: 'build',
@@ -123,17 +123,17 @@ module.exports = function (grunt) {
 			sass: {
 				files: ['src/**/*.scss'],
 				tasks: ['css'],
-				options: { livereload: true }
+				options: { livereload: false }
 			},
 			less: {
 				files: ['src/**/*.less'],
 				tasks: ['less', 'combine_mq'],
-				options: {livereload: true}
+				options: {livereload: false}
 			},
 			html: {
 				files: ['src/**/*.html'],
 				tasks: ['bake'],
-				options: {livereload: true}
+				options: {livereload: false}
 			},
 			img: {
 				files: ['src/**/*.{png,gif,jpg}'],

@@ -1,9 +1,8 @@
-<h3 class="text-han-purple">Padding/Margin Utility</h3>
-<p class="alert alert-info">
-	<strong>TODO:</strong> Add an introduction to padding / margin classes, explain where they are set (in variables) and
-	discuss why you would use this (to be consistent / to align to a baseline grid / vertical rhythm).</p>
+<h3 class="text-han-purple" id="padmarg">Padding/Margin Utility</h3>
+<p>Padding and margin utility classes are typically used for one-off items that dont necessarily require a module definition. In the past we have used a shorter syntax for these (.mtl, .pas, etc), but we have clarified the naming of the padding and margin styles. While a bit longer,  they are more readable/understandable. <strong>These should only be used as needed and are not a replacement for creating modules</strong>. The styles are generated from a combination of sass maps located in 2 locations. Sass maps that are solely associated with the padding and margins utility are in scss > utilities > utility > _padding-margin.scss.  Global sass maps that are used to create this utility such as "breakpoints" are in scss > utilities > _utility-variables.scss</p>
 
-<p>Just replace the word <strong>"padding"</strong> with <strong>"margin"</strong> to use either one</p>
+<p>The examples below show padding only. Just replace the word <strong>"padding"</strong> with <strong>"margin"</strong> to use either one</p>
+
 <hr>
 <h4>Directional</h4>
 <div class="flex-sm-up">
@@ -85,6 +84,20 @@
 		&nbsp;
 	</div>
 </div>
+<hr>
+<h4>Responsive Examples</h4>
+<p>sm-up, md-up, etc are specified based upon the breakpoint key in the scss > utilities > utility-variables.scss</p>
+<div class="flex-sm-up">
+	<div class="flex-grow-sm-up">
+		.padding-vertical-none-sm-up<br>
+		.padding-vertical-tiny-md-up<br>
+		.padding-vertical-small-xs-only<br>
+		.padding-vertical-medium-xsl-only<br>
+		.padding-vertical-large-lg-up<br>
+		.padding-vertical-huge-xsl-to-sm<br>
+	</div>
+</div>
+<hr>
 <div class="sg-pad-container margin-bottom-tiny margin-top-giant">
 	<div class="padding-left-tiny">.padding-left-tiny</div>
 </div>
@@ -108,18 +121,13 @@
 </div>
 
 <figure class="margin-top-medium margin-bottom-giant">
-					<pre>
-						<code class="language-html" data-lang="html">
+<pre>
+	<code class="language-html" data-lang="html">
 &lt;div class="padding-left-tiny"&gt;.padding-left-tiny&lt;/div&gt;
 &lt;div class="padding-left-small"&gt;.padding-left-small&lt;/div&gt;
 &lt;div class="padding-left-medium"&gt;.padding-left-medium&lt;/div&gt;
-
-<div><strong>Responsive Examples</strong></div>&lt;div class="padding-left-large-sm-up"&gt;.padding-left-large-sm-up&lt;/div&gt;
-&lt;div class="padding-left-huge-md-up"&gt;.padding-left-huge-md-up&lt;/div&gt;
-&lt;div class="padding-left-giant-lg-up"&gt;.padding-left-giant-lg-up&lt;/div&gt;
-&lt;div class="padding-left-massive-sm-only"&gt;.padding-left-massive-sm-only&lt;/div&gt;
-						</code>
-					</pre>
+	</code>
+</pre>
 </figure>
 
 

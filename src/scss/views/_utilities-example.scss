@@ -58,4 +58,14 @@
 		border: 1px solid #ccc;
 		background: lighten(#cccccc, 5%);
 	}
+
+	.sg-column-list {
+		column-count: 3;
+		column-gap: 40px;
+	}
+
+	.sg-section {
+		margin: map-get($spacing, medium) 0;
+		background: map-get($brand-colors, light-gray);
+	}
 }
