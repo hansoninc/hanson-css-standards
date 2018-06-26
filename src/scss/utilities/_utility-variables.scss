@@ -1,51 +1,49 @@
-/*==============
-PADDING AND MARGIN DEFAULTS
-==============*/
-$none:                  0;
-$tiny:                  5px;
-$small:                 10px;
-$medium:                20px;
-$large:                 30px;
-$huge:                  45px;
-$giant:                 60px;
-$massive:               90px;
+//================================================================================
+// Padding and margin defaults
+//
 
-
-/*==============
-//MEDIA QUERIES
-==============*/
-$xs-only:               "(max-width: 767px)";
-$xsl-up:                "(min-width: 480px)";
-$xsl-to-sm:             "(min-width: 480px) and (max-width: 991px)";
-$xsl-only:              "(min-width: 480px) and (max-width: 767px)";
-$sm-up:                 "(min-width: 768px)";
-$sm-down:               "(max-width: 991px)";
-$sm-only:               "(min-width: 768px) and (max-width: 991px)";
-$md-up:                 "(min-width: 992px)";
-$md-only:               "(min-width: 992px) and (max-width: 1199px)";
-$lg-up:                 "(min-width: 1200px)";
-
-
-/*==============
-//BRAND COLORS ARRAY
-===============*/
-$brand-colors: (
-	han-purple:         #3E1951,
-	han-dark-gray:      #302B39,
-	han-light-gray:     #eee,
-	white:              #fff
+$spacing: (
+	none:       0,
+	micro:      3px,
+	tiny:       6px,
+	small:      12px,
+	medium:     24px,
+	large:      36px,
+	huge:       48px,
+	giant:      60px,
+	massive:    72px
 );
 
-//Create Individual Variables We can use for items in the array as well
-//Variable Name will match up with the key name
-@each $color-var-key, $color-var-value in $brand-colors {
-	//$#{$color-var-key}: $color-var-value;
-}
+//================================================================================
+// Media queries
+//
+
+$xs-only:               "(max-width: #{$screen-xsl-max})";
+$xsl-up:                "(min-width: #{$screen-xsl-min})";
+$xsl-to-sm:             "(min-width: #{$screen-xsl-min}) and (max-width: #{$screen-sm-max})";
+$xsl-only:              "(min-width: #{$screen-xsl-min}) and (max-width: #{$screen-xsl-max})";
+$sm-up:                 "(min-width: #{$screen-sm-min})";
+$sm-down:               "(max-width: #{$screen-sm-max})";
+$sm-only:               "(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";
+$md-up:                 "(min-width: #{$screen-md-min})";
+$md-only:               "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
+$lg-up:                 "(min-width: #{$screen-lg-min})";
 
 
-/*=============
-BREAKPOINTS ARRAY
-==============*/
+//================================================================================
+// Brand colors
+//
+$brand-colors: (
+	purple:         #3E1951,
+	dark-gray:      #302B39,
+	light-gray:     #eee,
+	white:          #fff
+);
+
+
+//================================================================================
+// Breakpoints
+//
 $breakpoints: (
 	xs-only:            $xs-only,
 	xsl-up:             $xsl-up,
@@ -61,9 +59,9 @@ $breakpoints: (
 
 
 
-/*=============
-FLEXBOX GROUPINGS
-===============*/
+//================================================================================
+// Flexbox-related variables
+//
 $flex-justify: (
 	start:              flex-start,
 	end:                flex-end,
@@ -101,6 +99,7 @@ $flex-wrap: (
 	wrap-reverse:       wrap-reverse,
 );
 
+// @TODO Make this a mixin and extend it past 12
 $flex-order: (
 	1:                  1,
 	2:                  2,
@@ -142,9 +141,9 @@ $flex-columns: (
 
 
 
-/*=============
-PULLS ARRAY
-================*/
+//================================================================================
+// Float / pull
+//
 $pull-directions: (
 	left:               left,
 	right:              right,
@@ -153,9 +152,9 @@ $pull-directions: (
 
 
 
-/*=================
-TEXT ALIGNMENT ARRAY
-==================*/
+//================================================================================
+// Text alignment
+//
 $text-alignment: (
 	left:               left,
 	right:              right,
@@ -164,9 +163,9 @@ $text-alignment: (
 
 
 
-/*=================
-POSITIONING ARRAY
-==================*/
+//================================================================================
+// Positioning
+//
 $positioning: (
 	relative:           relative,
 	static:             static,

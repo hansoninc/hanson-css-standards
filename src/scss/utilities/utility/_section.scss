@@ -1,0 +1,47 @@
+//USED TO CREATE PADDING ON TOP AND BOTTOM BASED ON SASS MAP OPTIONS
+
+
+@each $section-key, $section-value in $spacing {
+	.section-#{$section-key} {
+		//specify top and bottom so we dont overwrite any left and right padding that may be on a section
+		padding-top: $section-value !important;
+		padding-bottom: $section-value !important;
+	}
+
+	//RESPONSIVE MODIFIERS
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.section-#{$section-key}-#{$bpkey} {
+				padding-top: $section-value !important;
+				padding-bottom: $section-value !important;
+			}
+		}
+	}
+
+	.section-#{$section-key}-top {
+		//specify top and bottom so we dont overwrite any left and right padding that may be on a section
+		padding-bottom: 0 !important;
+	}
+
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.section-#{$section-key}-top-#{$bpkey} {
+				padding-bottom: 0 !important;
+			}
+		}
+	}
+
+	/* ----- */
+	.section-#{$section-key}-bottom {
+		padding-top: 0 !important;
+	}
+
+	@each $bpkey, $bp in $breakpoints {
+		@media #{$bp} {
+			.section-#{$section-key}-bottom-#{$bpkey} {
+				padding-top: 0 !important;
+			}
+		}
+	}
+
+}

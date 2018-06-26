@@ -13,15 +13,14 @@ module.exports = function (grunt) {
 		bake: {
 			default: {
 				files: {
-					'build/example.html': 'src/example.html',
-					'build/scss-example.html': 'src/scss-example.html'
+					'build/utilities.html': 'src/utilities.html'
 				}
 			}
 		},
 		connect: {
 			server: {
 				options: {
-					port: 3000,
+					port: 2000,
 					keepalive: true,
 					livereload: true,
 					base: 'build',
@@ -88,8 +87,7 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				files: {
-					'build/css/scss/scss-global.css': 'src/scss/global.scss',
-					'build/css/scss/scss-styleguide.css': 'src/scss/scss-styleguide.scss'
+					'build/css/example.css': 'src/scss/example/example.scss'
 				}
 			}
 		},
@@ -115,7 +113,9 @@ module.exports = function (grunt) {
 					'build/css/2-bem.css': 'build/css/2-bem.css',
 					'build/css/3-nesting.css': 'build/css/3-nesting.css',
 					'build/css/4-organization.css': 'build/css/4-organization.css',
-					'build/css/5-manifest.css': 'build/css/5-manifest.css'
+					'build/css/5-states-hooks.css': 'build/css/5-states-hooks.css',
+					'build/css/6-views.css': 'build/css/6-views.css',
+					'build/css/7-manifest.css': 'build/css/7-manifest.css'
 				}
 			}
 		},
@@ -123,17 +123,17 @@ module.exports = function (grunt) {
 			sass: {
 				files: ['src/**/*.scss'],
 				tasks: ['css'],
-				options: { livereload: true }
+				options: { livereload: false }
 			},
 			less: {
 				files: ['src/**/*.less'],
 				tasks: ['less', 'combine_mq'],
-				options: {livereload: true}
+				options: {livereload: false}
 			},
 			html: {
 				files: ['src/**/*.html'],
 				tasks: ['bake'],
-				options: {livereload: true}
+				options: {livereload: false}
 			},
 			img: {
 				files: ['src/**/*.{png,gif,jpg}'],
@@ -145,7 +145,6 @@ module.exports = function (grunt) {
 		}
 	});
 	grunt.registerTask('default', [
-		'less',
 		'sass',
 		'postcss',
 		'bake',
@@ -153,9 +152,8 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('css', [
-		'less',
-		'combine_mq',
 		'sass',
+		'combine_mq',
 		'postcss'
 	]);
 };

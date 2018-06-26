@@ -1,0 +1,155 @@
+<h3 class="text-purple" id="padmarg">Padding/Margin Utility</h3>
+<p>Padding and margin utility classes are typically used for one-off items that dont necessarily require a module definition. In the past we have used a shorter syntax for these (.mtl, .pas, etc), but we have clarified the naming of the padding and margin styles. While a bit longer,  they are more readable/understandable. <strong>These should only be used as needed and are not a replacement for creating modules</strong>. The styles are generated from a combination of sass maps located in 2 locations. Sass maps that are solely associated with the padding and margins utility are in scss > utilities > utility > _padding-margin.scss.  Global sass maps that are used to create this utility such as "breakpoints" are in scss > utilities > _utility-variables.scss</p>
+
+<p>The examples below show padding only. Just replace the word <strong>"padding"</strong> with <strong>"margin"</strong> to use either one</p>
+
+<hr>
+<h4>Directional</h4>
+<div class="flex-sm-up">
+	<div class="flex-grow-sm-up">
+		.padding-left-none<br>
+		.padding-left-tiny<br>
+		.padding-left-small<br>
+		.padding-left-medium<br>
+		.padding-left-large<br>
+		.padding-left-huge<br>
+		.padding-left-giant<br>
+		.padding-left-massive
+	</div>
+	<div class="flex-grow-sm-up">
+		.padding-right-none<br>
+		.padding-right-tiny<br>
+		.padding-right-small<br>
+		.padding-right-medium<br>
+		.padding-right-large<br>
+		.padding-right-huge<br>
+		.padding-right-giant<br>
+		.padding-right-massive
+	</div>
+	<div class="flex-grow-sm-up">
+		.padding-top-none<br>
+		.padding-top-tiny<br>
+		.padding-top-small<br>
+		.padding-top-medium<br>
+		.padding-top-large<br>
+		.padding-top-huge<br>
+		.padding-top-giant<br>
+		.padding-top-massive
+	</div>
+	<div class="flex-grow-sm-up">
+		.padding-bottom-none<br>
+		.padding-bottom-tiny<br>
+		.padding-bottom-small<br>
+		.padding-bottom-medium<br>
+		.padding-bottom-large<br>
+		.padding-bottom-huge<br>
+		.padding-bottom-giant<br>
+		.padding-bottom-massive
+	</div>
+</div>
+<hr>
+<h4>Direction Combos</h4>
+<div class="flex-sm-up">
+	<div class="flex-grow-sm-up">
+		.padding-vertical-none<br>
+		.padding-vertical-tiny<br>
+		.padding-vertical-small<br>
+		.padding-vertical-medium<br>
+		.padding-vertical-large<br>
+		.padding-vertical-huge<br>
+		.padding-vertical-giant<br>
+		.padding-vertical-massive
+	</div>
+	<div class="flex-grow-sm-up">
+		.padding-all-none<br>
+		.padding-all-tiny<br>
+		.padding-all-small<br>
+		.padding-all-medium<br>
+		.padding-all-large<br>
+		.padding-all-huge<br>
+		.padding-all-giant<br>
+		.padding-all-massive
+	</div>
+	<div class="flex-grow-sm-up">
+		.padding-horizontal-none<br>
+		.padding-horizontal-tiny<br>
+		.padding-horizontal-small<br>
+		.padding-horizontal-medium<br>
+		.padding-horizontal-large<br>
+		.padding-horizontal-huge<br>
+		.padding-horizontal-giant<br>
+		.padding-horizontal-massive
+	</div>
+	<div class="flex-grow-sm-up">
+		&nbsp;
+	</div>
+</div>
+<hr>
+<h4>Responsive Examples</h4>
+<p>sm-up, md-up, etc are specified based upon the breakpoint key in the scss > utilities > utility-variables.scss</p>
+<div class="flex-sm-up">
+	<div class="flex-grow-sm-up">
+		.padding-vertical-none-sm-up<br>
+		.padding-vertical-tiny-md-up<br>
+		.padding-vertical-small-xs-only<br>
+		.padding-vertical-medium-xsl-only<br>
+		.padding-vertical-large-lg-up<br>
+		.padding-vertical-huge-xsl-to-sm<br>
+	</div>
+</div>
+<hr>
+<div class="sg-pad-container margin-bottom-tiny margin-top-giant">
+	<div class="padding-left-tiny">.padding-left-tiny</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-left-small">.padding-left-small</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-left-medium">.padding-left-medium</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-left-large">.padding-left-large</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-left-huge">.padding-left-huge</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-left-giant">.padding-left-giant</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-left-massive">.padding-left-massive</div>
+</div>
+
+<figure class="margin-top-medium margin-bottom-giant">
+<pre>
+	<code class="language-html" data-lang="html">
+&lt;div class="padding-left-tiny"&gt;.padding-left-tiny&lt;/div&gt;
+&lt;div class="padding-left-small"&gt;.padding-left-small&lt;/div&gt;
+&lt;div class="padding-left-medium"&gt;.padding-left-medium&lt;/div&gt;
+	</code>
+</pre>
+</figure>
+
+
+
+<div class="sg-pad-container margin-bottom-tiny margin-top-huge">
+	<div class="padding-vertical-tiny text-center">.padding-vertical-tiny</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-vertical-small text-center">.padding-vertical-small</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-vertical-medium text-center">.padding-vertical-medium</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-vertical-large text-center">.padding-vertical-large</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-vertical-huge text-center">.padding-vertical-huge</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-vertical-giant text-center">.padding-vertical-giant</div>
+</div>
+<div class="sg-pad-container margin-bottom-tiny">
+	<div class="padding-vertical-massive text-center">.padding-vertical-massive</div>
+</div>

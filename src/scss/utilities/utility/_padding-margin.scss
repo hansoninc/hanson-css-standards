@@ -16,21 +16,9 @@
 //.margin-right-small-xsl-only
 //...etc
 
-//VARIABLES ARE SET IN core/_variables.scss
-
 $types: (
 		type1:      margin,
 		type2:      padding
-);
-$sizes: (
-		none:       $none,
-		tiny:       $tiny,
-		small:      $small,
-		medium:     $medium,
-		large:      $large,
-		huge:       $huge,
-		giant:      $giant,
-		massive:    $massive
 );
 $directions: (
 		dir1:       left,
@@ -51,7 +39,7 @@ $dirCombo: (
 
 //DIRECTIONAL PADDING AND MARGINS - (Ex. .padding-left-large, margin-top-small, etc)
 @each $key, $type in $types {
-	@each $sizekey, $size in $sizes  {
+	@each $sizekey, $size in $spacing  {
 		@each $key, $direction in $directions {
 			@if $type == margin {
 				.margin-#{$direction}-#{$sizekey} {
@@ -85,7 +73,7 @@ $dirCombo: (
 
 //SCENARIO MARGINS AND PADDING ((all, none, horizontal, vertical), Ex. margin-all-large, padding-vertical-medium, etc)
 @each $key, $type in $types {
-	@each $sizekey, $size in $sizes {
+	@each $sizekey, $size in $spacing {
 		@each $key, $dirCo in $dirCombo {
 			@if $dirCo == vertical and $type == padding {
 				.padding-vertical-#{$sizekey} {

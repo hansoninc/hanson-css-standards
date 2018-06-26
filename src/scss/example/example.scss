@@ -1,0 +1,55 @@
+/*================================================================================
+[Layer 1 - Core variables and mixins]
+*/
+@import "../lib/bootstrap/variables";
+@import "../lib/bootstrap/mixins";
+
+// Add any custom variables and mixins you create here
+@import "../utilities/utility-variables";
+
+/*================================================================================
+[Layer 2 - Reset and dependencies]
+*/
+@import "../lib/bootstrap/normalize";
+@import "../lib/bootstrap/print";
+@import "../lib/bootstrap/glyphicons";
+
+// Add your fonts, icon sets, and any other global dependencies here
+
+/*================================================================================
+[Layer 3 - Core CSS]
+*/
+@import "../lib/bootstrap/scaffolding";
+@import "../lib/bootstrap/type";
+@import "../lib/bootstrap/code";
+@import "../lib/bootstrap/grid";
+@import "../lib/bootstrap/tables";
+@import "../lib/bootstrap/forms";
+@import "../lib/bootstrap/buttons";
+
+/*================================================================================
+[Layer 4 - Components]
+*/
+// Comment out any Bootstrap modules you aren't using, or better yet
+// comment them all out and enable them as needed.
+
+@import "../lib/bootstrap/alerts";
+
+// Add your own modules here
+
+/*================================================================================
+[Layer 5 - Views]
+*/
+
+// Add your view-specific stylesheets here. Before you add anything to these sheets as a one-off,
+// ask yourself if it can be turned into a module or a variant of a module.
+@import "../views/utilities-example";
+
+/*================================================================================
+[Layer 6 - Utility classes]
+*/
+@import "../lib/bootstrap/utilities";
+@import "../lib/bootstrap/responsive-utilities";
+
+// Add your own utilities here
+@import "../utilities/utilities";

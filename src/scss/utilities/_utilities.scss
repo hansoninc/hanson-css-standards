@@ -1,39 +1,44 @@
-/*==============
-PADDING/MARGIN UTILITY
-==============*/
+//================================================================================
+// Padding / margin utilities
+//
 @import "utility/padding-margin";
 
-/*==============
-RESPONSIVE PULLS/FLOATS UTILITY
-==============*/
+//================================================================================
+// Responsive float / pull utilities
+//
 @import "utility/pull";
 
-/*==============
-FLEXBOX UTILITY
-==============*/
+//================================================================================
+// Flexbox alignment and display utilities (not needed if using Bootstrap 4)
+//
 @import "utility/flexbox";
 
-/*==============
-TEXT COLOR UTILITY
-==============*/
+//================================================================================
+// Text colors
+//
 @import "utility/text-color";
 
-/*==============
-BG COLOR UTILITY
-==============*/
+//================================================================================
+// Background colors
+//
 @import "utility/bg-color";
 
-/*==============
-NON BREAKING SPACE
-==============*/
+//================================================================================
+// Non-breaking space
+//
 @import "utility/non-breaking-space";
 
-/*==============
-RESPONSIVE TEXT ALIGNMENT UTILITY
-==============*/
+//================================================================================
+// Responsive text alignment utilities
+//
 @import "utility/text-alignment";
 
-/*==============
-POSITIONING UTILITY
-==============*/
+//================================================================================
+// Responsive positioning utilities
+//
 @import "utility/positioning";
+
+//================================================================================
+// Responsive section padding
+//
+@import "utility/section";
